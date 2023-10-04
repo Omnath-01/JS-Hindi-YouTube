@@ -11,7 +11,7 @@ let userEmail; // typeof undefied
 
 const id = Symbol('123') // typeof symbol
 const anotherId = Symbol('123') // typeof symbol
- 
+
 console.log(id === anotherId);
 
 const bigNumber = 2382983293792332n
@@ -22,7 +22,7 @@ const bigNumber = 2382983293792332n
 // Array, Objects, Functions
 
 const heros = ["Shaktiman", "Naagraj", "Doga"] // typeof object
-let myObj = { 
+let myObj = {
     name: "Hitesh",
     age: 22,
 }// typeof object
@@ -39,3 +39,27 @@ which means that data types of variables
 are determined by the value they hold at runtime 
 and can change throughout the program as we assign different values to them
 */
+
+// ++++++++++Stack and Heap memory in javascript++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
+// stack memory give copy
+// heap memory give reference
+
+let myYoutubeName = "hiteshchoudrydotcom"
+
+let anotherName = myYoutubeName
+anotherName = "chaiaurcode"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne
+userTwo.email = "hitesh@google.com"
+
+console.log(userOne.email) // hitesh@google.com
+console.log(userTwo.email) // hitesh@google.com
